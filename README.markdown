@@ -25,28 +25,28 @@ Paris is now considered to be feature complete as of version 1.5.0. Whilst it wi
 Возможности
 --------
 
-* Extremely simple configuration.
-* Exposes the full power of [Idiorm](http://github.com/j4mie/idiorm/)'s fluent query API.
-* Supports associations.
-* Simple mechanism to encapsulate common queries in filter methods.
-* Built on top of [PDO](http://php.net/pdo).
-* Uses [prepared statements](http://uk.php.net/manual/en/pdo.prepared-statements.php) throughout to protect against [SQL injection](http://en.wikipedia.org/wiki/SQL_injection) attacks.
-* Database agnostic. Currently supports SQLite, MySQL, Firebird and PostgreSQL. May support others, please give it a try!
-* Supports collections of models with method chaining to filter or apply actions to multiple results at once.
-* Multiple connections are supported
+* Очень простая конфигурация.
+* Показывает всю мощь API "текучего интерфейса" запросов из [Idiorm](http://github.com/j4mie/idiorm/).
+* Поддержка связей (между моделями).
+* Простой механизм для инкапсуляции простых запросов в методах фильтрации.
+* Построена на основе [PDO](http://php.net/pdo).
+* Использует [prepared statements](http://uk.php.net/manual/en/pdo.prepared-statements.php) для защиты от [SQL иньекций](http://en.wikipedia.org/wiki/SQL_injection).
+* Не привязана к типу БД. Поддерживает SQLite, MySQL, Firebird и PostgreSQL. Может поддерживать и другие, попробуйте!
+* Поддерживает коллекции моделей с цепочкой методов для фильтрации или применения действий к множеству записей за раз.
+* Поддерживает множество соединений
 
 Документация
 -------------
 
-The documentation is hosted on Read the Docs: [paris.rtfd.org](http://paris.rtfd.org)
+Данная документация размещена на Read the Docs: [paris.rtfd.org](http://paris.rtfd.org)
 
-### Building the Docs ###
+### Сборка документации ###
 
-You will need to install [Sphinx](http://sphinx-doc.org/) and then in the docs folder run:
+Вам потребуется установить [Sphinx](http://sphinx-doc.org/) и затем в директории docs выполнить:
 
     make html
 
-The documentation will now be in docs/_build/html/index.html
+Документация появится в docs/_build/html/index.html
 
 Взглянем на код
 -------------------
@@ -71,41 +71,41 @@ foreach ($tweets as $tweet) {
 }
 ```
 
-Changelog
+Лог изменений
 ---------
 
-#### 1.5.6 - released 2017-03-21
+#### 1.5.6 - релиз 2017-03-21
 
-* Allow IDE's to autocomplete when `foreach` over `find_many()` result [[stratoss](https://github.com/stratoss)] - [issue #128](https://github.com/j4mie/paris/pull/128)
-* Document the @property PHPDoc comment for IDE autocomplete of model properties [[Treffynnon](https://github.com/Treffynnon)]
+* Позволяет IDE выполнять автодополненте при использовании цикла `foreach` над результатом выполнения `find_many()` [[stratoss](https://github.com/stratoss)] - [issue #128](https://github.com/j4mie/paris/pull/128)
+* Опишите @property в комментарии PHPDoc для того, чтобы IDE прлизводила автодополнение свойств модели [[Treffynnon](https://github.com/Treffynnon)]
 
-#### 1.5.5 - released 2016-12-14
+#### 1.5.5 - релиз 2016-12-14
 
-* Fix join table name not generated correctly [[Ralphunter](https://github.com/Ralphunter)] - [issue #109](https://github.com/j4mie/paris/pull/109)
-* Add phpunit as dev dependency and composer script (`composer test`) to easily run tests [[Treffynnon](https://github.com/Treffynnon)]
+* Fix некорректной генерации имени таблицы в join [[Ralphunter](https://github.com/Ralphunter)] - [issue #109](https://github.com/j4mie/paris/pull/109)
+* Добавлен phpunit, как dev-зависимость, так же composer скрипт (`composer test`) для простого запуска тестов [[Treffynnon](https://github.com/Treffynnon)]
 * Global setting to allow static requests to avoid being forced in to using the namespace + class as the auto table name [[michaelward82](https://github.com/michaelward82)] - [issue #100](https://github.com/j4mie/paris/issues/100)
 * Document conflict between static Model calling and auto_prefix_models [[michaelward82](https://github.com/michaelward82)] - [issue #102](https://github.com/j4mie/paris/issues/102)
-* Added @method tags for magic methods [[stellis](https://github.com/stellis)] - [issue #104](https://github.com/j4mie/paris/issues/104)
-* Add missing `__unset()` magic method [[qyanu](https://github.com/qyanu)] - [issue #106](https://github.com/j4mie/paris/issues/106)
-* Remove PHP 5.2 from travis-ci containers to test against (**note** Idiorm still supports PHP 5.2 despite this) [[Treffynnon](https://github.com/treffynnon)]
+* Доавлены теги @method для магических методов [[stellis](https://github.com/stellis)] - [issue #104](https://github.com/j4mie/paris/issues/104)
+* Добавлен недостающий магический метод `__unset()` [[qyanu](https://github.com/qyanu)] - [issue #106](https://github.com/j4mie/paris/issues/106)
+* Удаление PHP 5.2 из контейнеров travis-ci to test against (**примечание** не смотря на это, Idiorm продолжает поддерживать PHP 5.2) [[Treffynnon](https://github.com/treffynnon)]
 
-#### 1.5.4 - released 2014-09-23
+#### 1.5.4 - релиз 2014-09-23
 
-* Corrects return value in docblock for 2 Model functions [[michaelward82](https://github.com/michaelward82)] - [issue #99](https://github.com/j4mie/paris/pull/99)
+* Корректировка возвращаемого значения в docblock для 2 функций модели [[michaelward82](https://github.com/michaelward82)] - [issue #99](https://github.com/j4mie/paris/pull/99)
 
-#### 1.5.3 - released 2014-06-25
+#### 1.5.3 - релиз 2014-06-25
 
 * Remove erroneously committed git merge backup file
 
-#### 1.5.2 - released 2014-06-23
+#### 1.5.2 - релиз 2014-06-23
 
 * Paris incorrectly relying on old Idiorm version in the composer.json [[ilsenem](https://github.com/ilsenem)] - [issue #96](https://github.com/j4mie/paris/pull/96)
 
-#### 1.5.1 - released 2014-06-22
+#### 1.5.1 - релиз 2014-06-22
 
 * Remove HHVM build target from travis-ci as there is a bug in HHVM
 
-#### 1.5.0 - released 2014-06-22
+#### 1.5.0 - релиз 2014-06-22
 
 * Allows static calling of Model subclasses, ignoring namespace info during table name generation [[michaelward82](https://github.com/michaelward82)] - [issue #90](https://github.com/j4mie/paris/issues/90)
 * Prevent invalid method calls from triggering infinite recursion [[michaelward82](https://github.com/michaelward82)] - [issue #75](https://github.com/j4mie/idiorm/issues/75)
@@ -116,17 +116,17 @@ Changelog
 * Improve code docblocks and whitespace [[michaelward82](https://github.com/michaelward82)] - [issue #93](https://github.com/j4mie/paris/issues/93)
 * Improve connections documentation [[kkeiper1103](https://github.com/kkeiper1103)] - [issue #79](https://github.com/j4mie/paris/issues/79)
 
-#### 1.4.2 - released 2013-12-12
+#### 1.4.2 - релиз 2013-12-12
 
 **Patch update to remove a broken pull request** - may have consequences for users of 1.4.0 and 1.4.1 that exploited the "`find_many()` now returns an associative array with the databases primary ID as the array keys" change that was merged in 1.4.0.
 
 * Back out pull request/issue [#133](https://github.com/j4mie/idiorm/pull/133) as it breaks backwards compatibility in previously unexpected ways (see Idiorm issues [#162](https://github.com/j4mie/idiorm/pull/162), [#156](https://github.com/j4mie/idiorm/issues/156) and [#133](https://github.com/j4mie/idiorm/pull/133#issuecomment-29063108)) - sorry for merging this change into Paris - closes Idiorm [issue 156](https://github.com/j4mie/idiorm/issues/156)
 
-#### 1.4.1 - released 2013-09-05
+#### 1.4.1 - релиз 2013-09-05
 
 * Increment composer.json requirement for Idiorm to 1.4.0 [[michaelward82](https://github.com/michaelward82)] - [Issue #72](https://github.com/j4mie/paris/pull/72)
 
-#### 1.4.0 - released 2013-09-05
+#### 1.4.0 - релиз 2013-09-05
 
 * Call methods against model class directly eg. `User::find_many()` - PHP 5.3 only [[Lapayo](https://github.com/Lapayo)] - [issue #62](https://github.com/j4mie/idiorm/issues/62)
 * `find_many()` now returns an associative array with the databases primary ID as the array keys [[Surt](https://github.com/Surt)] - see commit [9ac0ae7](https://github.com/j4mie/paris/commit/9ac0ae7d302f1980c95b97a98cbd6d5b2c04923f) and Idiorm [issue #133](https://github.com/j4mie/idiorm/issues/133)
@@ -135,7 +135,7 @@ Changelog
 * Make tests/bootstrap.php HHVM compatible [[JoelMarcey](https://github.com/JoelMarcey)] - [issue #71](https://github.com/j4mie/idiorm/issues/71)
 * belongs_to doesn't work with $auto_prefix_models ([issue #70](https://github.com/j4mie/paris/issues/70))
 
-#### 1.3.0 - released 2013-01-31
+#### 1.3.0 - релиз 2013-01-31
 
 * Documentation moved to [paris.rtfd.org](http://paris.rtfd.org) and now built using [Sphinx](http://sphinx-doc.org/)
 * Add support for multiple database connections [[tag](https://github.com/tag)] - [issue #15](https://github.com/j4mie/idiorm/issues/15)
@@ -149,14 +149,14 @@ Changelog
 * Update included Idiorm version for tests
 * Move documentation to use Sphinx
 
-#### 1.2.0 - released 2012-11-14
+#### 1.2.0 - релиз 2012-11-14
 
 * Setup composer for installation via packagist (j4mie/paris)
 * Add in basic namespace support, see [issue #20](https://github.com/j4mie/paris/issues/20)
 * Allow properties to be set as an associative array in `set()`, see [issue #13](https://github.com/j4mie/paris/issues/13)
 * Patch in idiorm now allows empty models to be saved (j4mie/idiorm see [issue #58](https://github.com/j4mie/paris/issues/58))
 
-#### 1.1.1 - released 2011-01-30
+#### 1.1.1 - релиз 2011-01-30
 
 * Fix incorrect tests, see [issue #12](https://github.com/j4mie/paris/issues/12)
 
