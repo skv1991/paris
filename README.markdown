@@ -10,19 +10,19 @@ Paris
 
 Paris is now considered to be feature complete as of version 1.5.0. Whilst it will continue to be maintained with bug fixes there will be no further new features added from this point on.
 
-**Please do not submit feature requests or pull requests adding new features as they will be closed without ceremony.**
+**Не отправляйте пожалуйста запросы на новые возможности или pull-реквесты поскольку они будут попросту закрываться.**
 
 ---
 
-A lightweight Active Record implementation for PHP5.
+Легковесная реализация паттерна Active Record для PHP5.
 
-Built on top of [Idiorm](http://github.com/j4mie/idiorm/).
+Построена на основе [Idiorm](http://github.com/j4mie/idiorm/).
 
-Tested on PHP 5.2.0+ - may work on earlier versions with PDO and the correct database drivers.
+Протестирована на PHP 5.2.0+ - может работать на более ранних версиях с расширением PDO и корректными драйверами баз данных.
 
-Released under a [BSD license](http://en.wikipedia.org/wiki/BSD_licenses).
+Выпущена под [лицензией BSD](http://en.wikipedia.org/wiki/BSD_licenses).
 
-Features
+Возможности
 --------
 
 * Extremely simple configuration.
@@ -35,7 +35,7 @@ Features
 * Supports collections of models with method chaining to filter or apply actions to multiple results at once.
 * Multiple connections are supported
 
-Documentation
+Документация
 -------------
 
 The documentation is hosted on Read the Docs: [paris.rtfd.org](http://paris.rtfd.org)
@@ -48,7 +48,7 @@ You will need to install [Sphinx](http://sphinx-doc.org/) and then in the docs f
 
 The documentation will now be in docs/_build/html/index.html
 
-Let's See Some Code
+Взглянем на код
 -------------------
 ```php
 class User extends Model {
